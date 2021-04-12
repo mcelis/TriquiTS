@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>TRIQUI</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div>
+            Nombre Jugador 1
+        </div>
+        <input type="text" id="J1">
+    </div>
+    <div class="container">
+        <div>
+            Nombre Jugador 2
+        </div>
+        <input type="text" id="J2">
+    </div>
+    <div class="controles">
+        <div class="btn-group controles" role="group">
+      <button type="button" id="inicio" class="btn btn-success" onclick="iniciar()">Iniciar</button>
+      <button type="button" id="reiniciar" class="btn btn-danger" onclick="reiniciar()" disabled>Reiniciar</button>
+    </div>
+    </div>
+        <div class="tablero">
+      <div class="fila">
+        <div id="caja11" onclick="jugada('11')" class="caja"></div>
+        <div id="caja12" onclick="jugada('12')" class="caja"></div>
+        <div id="caja13" onclick="jugada('13')" class="caja"></div>
+      </div>
+      <div class="fila">
+        <div id="caja21" onclick="jugada('21')" class="caja "></div>
+        <div id="caja22" onclick="jugada('22')" class="caja "></div>
+        <div id="caja23" onclick="jugada('23')" class="caja "></div>
+      </div>
+      <div class="fila">
+        <div id="caja31" onclick="jugada('31')" class="caja "></div>
+        <div id="caja32" onclick="jugada('32')" class="caja "></div>
+        <div id="caja33" onclick="jugada('33')" class="caja "></div>
+      </div>
+    </div>
+    <div class="info" id="info">
+        Presiona el boton Iniciar para comenzar el juego!
+    </div>
+    
+    
+        <!-- The Modal -->
+        <div class="modal fade" id="cajaYaJugada">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Triqui</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                Esta caja ya ha sido jugada!
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    
+        <!-- The Modal -->
+        <div class="modal fade" id="Ganador">
+            <div class="modal-dialog">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Triqui</h4>
+                  <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body-res" id="resultado">
+    
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+          <script src="js/index.js"></script>
+          <script src="js/clases.js"></script>
+</body>
+</html>
